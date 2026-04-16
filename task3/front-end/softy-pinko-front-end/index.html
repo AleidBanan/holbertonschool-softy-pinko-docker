@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Softy Pinko</title>
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-softy-pinko.css">
+</head>
+
+<body>
+
+<!-- ***** Welcome Area Start ***** -->
+<div class="welcome-area" id="welcome">
+
+    <div class="header-text">
+        <div class="container">
+            <div class="row">
+                <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-sm-12">
+
+                    <!-- ✅ Dynamic content -->
+                    <h1 id="dynamic-content"></h1>
+
+                    <!-- Original content -->
+                    <h1>We provide the best <strong>strategy</strong><br>to grow up your<strong>business</strong></h1>
+
+                    <a href="#features" class="main-button-slider">Discover More</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ***** Welcome Area End ***** -->
+
+
+<!-- Scripts -->
+<script src="assets/js/jquery-2.1.0.min.js"></script>
+<script src="assets/js/popper.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+
+<script src="assets/js/owl-carousel.js"></script>
+<script src="assets/js/scrollreveal.min.js"></script>
+<script src="assets/js/waypoints.min.js"></script>
+<script src="assets/js/jquery.counterup.min.js"></script>
+<script src="assets/js/imgfix.min.js"></script>
+<script src="assets/js/custom.js"></script>
+
+<!-- ✅ Dynamic API script -->
+<script>
+    $(function() {
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:5252/api/hello",
+            success: function(data) {
+                console.log(data);
+                $('#dynamic-content').text(data);
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
